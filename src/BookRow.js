@@ -2,10 +2,7 @@ import React from "react";
 
 const BookRow = props => {
   const book = props.book;
-  const authorName = props.authorName;
-  const authors = props.book.authors.map(auhtor => (
-    <BookRow book={book} key={book.title} authorName={authorName} />
-  ));
+  const authorName = book.authors.map((author)=> <div>{author.name}</div>);
   return (
     <tr>
       <td>{book.title}</td>
